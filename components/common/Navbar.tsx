@@ -3,6 +3,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button, buttonVariants } from "../ui/button";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const user = false;
@@ -15,6 +16,7 @@ const Navbar = () => {
             <Sparkles className="w-8 h-8 text-primary" />
             <span className="text-xl font-bold text-primary">EstudaFácil</span>
           </Link>
+          <MobileMenu user={user}/>
           <nav className="hidden md:flex items-center space-x-4">
             <Link
               className={buttonVariants({
