@@ -47,8 +47,13 @@ const Navbar = () => {
                   Dashboard
                 </Link>
 
-                <Link className={buttonVariants()} href="/create">
+                <Link className={buttonVariants()} href={"/create"}>
                 Criar</Link>
+
+                <Link href={"/signout"} className={buttonVariants({
+                    variant: "ghost"
+                })}>
+                Sair</Link>
               </div>
             )}
           </nav>
