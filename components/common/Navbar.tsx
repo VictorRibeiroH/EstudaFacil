@@ -4,6 +4,7 @@ import { Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button, buttonVariants } from "../ui/button";
 import MobileMenu from "./MobileMenu";
+import { LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 const Navbar = () => {
   const user = false;
@@ -16,7 +17,7 @@ const Navbar = () => {
             <Sparkles className="w-8 h-8 text-primary" />
             <span className="text-xl font-bold text-primary">EstudaFácil</span>
           </Link>
-          <MobileMenu user={user}/>
+          <MobileMenu user={user} />
           <nav className="hidden md:flex items-center space-x-4">
             <Link
               className={buttonVariants({
@@ -28,13 +29,17 @@ const Navbar = () => {
             </Link>
             {!user ? (
               <>
-                <Link href="/login"
-                    className={buttonVariants({
-                        variant: "secondary"
-                    })}
-                >Login</Link>
+                <LoginLink
+                  className={buttonVariants({
+                    variant: "secondary",
+                  })}
+                >
+                  Login
+                </LoginLink>
 
-                <Link href="/register" className={buttonVariants()}>Registre-se</Link>
+                <RegisterLink className={buttonVariants()}>
+                  Registre-se
+                </RegisterLink>
               </>
             ) : (
               <div className="flex items-center gap-2">
@@ -48,12 +53,16 @@ const Navbar = () => {
                 </Link>
 
                 <Link className={buttonVariants()} href={"/create"}>
-                Criar</Link>
+                  Criar
+                </Link>
 
-                <Link href={"/signout"} className={buttonVariants({
-                    variant: "ghost"
-                })}>
-                Sair</Link>
+                <LogoutLink
+                  className={buttonVariants({
+                    variant: "ghost",
+                  })}
+                >
+                  Sair
+                </LogoutLink>
               </div>
             )}
           </nav>

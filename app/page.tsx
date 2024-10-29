@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { features } from "@/constants";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import Link from "next/link";
 
 export default function Home() {
