@@ -18,3 +18,28 @@ export const features = [
     description: "Simplifique seu processo de planejamento para dedicar mais tempo aos seus alunos.",
   },
 ];
+
+
+export const tiers = [
+  {
+    name: "Gratuito",
+    price: "R$0",
+    features: [
+      "5 planos de aulas por mês",
+      "Tópicos pré-selecionados",
+      "Customização simples",
+      "Suporte por e-mail",
+    ]
+  },
+  {
+    name: "Pro",
+    price: "R$29,99",
+    features: [
+      "20 planos de aula por mês",
+      "Requisitos personalizados",
+      "Personalização avançada",
+      "Suporte priotiário",
+      "Templates exclusivos",
+    ]
+  }
+]

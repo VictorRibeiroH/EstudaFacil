@@ -1,4 +1,5 @@
 import MaxWidthWrapper from "@/components/common/MaxWidthWrapper";
+import PricingSection from "@/components/common/PricingSection";
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -15,6 +16,7 @@ export default function Home() {
   return <MaxWidthWrapper>
     <HeroSection />
     <FeaturesSection />
+    <PricingSection />
     <CTASection />
   </MaxWidthWrapper>;
 }
@@ -39,7 +41,7 @@ function HeroSection() {
           className={buttonVariants({
             variant: 'secondary',
           })}
-        >Preço</Link>
+        >Planos</Link>
       </div>
     </div>
   );
