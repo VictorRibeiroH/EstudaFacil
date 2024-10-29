@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CheckIcon } from "@radix-ui/react-icons";
+import { Button } from "../ui/button";
 
 const PricingCard = ({
   tier,
@@ -22,7 +23,7 @@ const PricingCard = ({
   index: number;
 }) => {
   return (
-    <Card>
+    <Card key={index} className={index === 1 ? "border-primary" : ""}>
       <CardHeader>
         <CardTitle className="text-2xl">{tier.name}</CardTitle>
         <CardDescription className="text-3xl font-bold">
@@ -41,6 +42,15 @@ const PricingCard = ({
           ))}
         </ul>
       </CardContent>
+
+      <CardFooter>
+        <Button className="w-full"
+        variant={index === 1 ? "default" : "outline"}>
+            {
+                index === 0 ? "Começar agora" : "Atualize para a versão Pro"
+            }
+        </Button>
+      </CardFooter>
     </Card>
   );
 };
